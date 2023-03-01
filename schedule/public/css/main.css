@@ -1,0 +1,865 @@
+/* --------------------------------背景画像-------------------------------- */
+.am {
+  background-image:url(../img/main_img/am.jpg);
+  background-size: cover;
+  margin: 0;
+}
+
+.pm {
+  background-image:url(../img/main_img/pm.jpg);
+  background-size: cover;
+  margin: 0;
+}
+
+.eve {
+  background-image:url(../img/main_img/eve.jpg);
+  background-size: cover;
+  margin: 0;
+}
+
+footer {
+  background-color: black;
+  width: 100%;
+  height: 30px;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* --------------------------------タイトル（共通）-------------------------------- */
+img {
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+.top_title {
+  width: 80%;
+  height: 80px;
+  background-color: black;
+  position: relative;
+  top: 25px;
+  margin: 0 auto;
+}
+
+.red {
+  width: 95%;
+  height: 80px;
+  background-color: red;
+  transform: skew(2deg, -3deg);
+  position: absolute;
+  margin-left: 20px;
+  top: 0;
+  z-index: -1;
+}
+
+.title h1 {
+  font-size: 43px;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+}
+
+.left_ball {
+  color: white;
+  margin-right: 10%;
+  font-size: 28px;
+}
+
+.right_ball {
+  color: white;
+  margin-left: 11%;
+  font-size: 28px;
+}
+
+/* --------------------------------カレンダー-------------------------------- */
+.otherday {
+  border: none;
+  background-color: black;
+  border: 5px solid black;
+  color:rgb(85, 84, 84);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.otherday:hover {
+  color: white;
+  background-color: rgb(42, 42, 42);
+  transition: ease .1s;
+  border: none;
+}
+
+.today {
+  border: none;
+  background-color: yellow;
+  border: 5px solid yellow;
+  color:rgb(84, 84, 84);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.today:hover {
+  color: black;
+  transition: ease .1s;
+}
+
+.week {
+  font-size: 28px;
+  color:rgb(84, 84, 84);
+}
+
+.week th:nth-child(1),
+tbody td:first-child input {
+  color: rgb(161, 0, 0);
+}
+
+tbody td:first-child input:hover {
+  color: white;
+  background-color: red;
+  transition: ease .1s;
+  border: none;
+}
+
+.week th:nth-child(7),
+tbody td:last-child input {
+  color: rgb(0, 0, 161);
+}
+
+tbody td:last-child input:hover {
+  color: white;
+  background-color: blue;
+  transition: ease .1s;
+  border: none;
+}
+
+.calendar {
+  font-family: "Impact";
+  text-align: center;
+  background-color: black;
+  margin-left: 20%;
+  transform: skew(18deg);
+  position: absolute;
+  top: 10%;
+  display: block;
+  width: 65%;
+}
+
+/* 当日に戻るボタン<< */
+.month_back_btn {
+  position: absolute;
+  left: 30%;
+  bottom: 4%;
+  border: none;
+  background-color: black;
+  color:rgb(84, 84, 84);
+  font-size: 30px;
+  transform: skew(18deg);
+}
+
+.month_back_btn:hover {
+  color: rgb(125, 0, 0);
+  transition: ease .1s;
+}
+
+td {
+  width: 5%;
+  height: 12vh;
+  background-color: black;
+}
+
+/* ----------------メイン画面---------------- */
+/* メイン画面全体 */
+.main {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+/* ----------------左半分---------------- */
+/* 全体と左の黒い部分 */
+.main_calendar {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  position: relative;
+  background-color: black;
+  margin-left: -130px;
+  transform: skew(-13deg);
+  width: 62%;
+}
+
+/* 真ん中上部の日付 */
+.pick_container {
+  width: 170px;
+  margin-left: 82%;
+  margin-top: -30px;
+  background-color: white;
+  transform: skew(23deg, -10deg);
+  height: 210px;
+}
+
+.pick_days {
+  transform: skew(-20deg, 10deg);
+  font-size: 20px;
+}
+
+.pick_days h2 {
+  padding-top: 32%;
+  margin: 0;
+}
+
+.pick_days h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 10px;
+  margin-left: 30px;
+}
+
+.h1_month {
+  color: black;
+  font-size: 25px;
+  margin-left: 8px;
+}
+
+.month_btns {
+  display: flex;
+  position: relative;
+  bottom: 40px;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.month_btn {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  border: none;
+}
+
+.m_prev {
+  margin-right: 8rem;
+}
+
+/* ----------------右半分---------------- */
+.right {
+  display: block;
+  height: 100%;
+}
+
+/* 真ん中中段の日付 */
+.pickdays {
+  margin-top: 5px;
+  margin-left: -5px;
+  background-color: black;
+  width: 300px;
+  line-height: 50px;
+  height: 50px;
+  transform: skew(10deg, -3deg);
+}
+
+.pickdays p {
+  color: white;
+  text-align: right;
+  font-size: 30px;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+/* ----------------deadlineのスケジュール---------------- */
+.deadlines {
+  position: absolute;
+  top: 170px;
+  left: 100%;
+}
+
+.deadline {
+  color: red;
+  font-size: 19px;
+  font-weight: bold;
+  width: 550px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* ----------------ハンバーガーメニュー---------------- */
+/* 静止状態 */
+.hamburger_menu {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 150px solid black;
+  border-right: 200px solid transparent;
+  border-left: 0 solid transparent;
+  margin-left: 516px;
+  transform: scale(-1, -1);
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  top: 37px;
+  right: 24px;
+  width: 45px;
+  height: 40px;
+  background-color: black;
+  border: none;
+  padding: 0;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background-color: rgb(84, 84, 84);
+}
+
+.hamburger:hover {
+  transition: .2s;
+}
+
+.bar:nth-child(1) {
+  top: 0;
+}
+
+.bar:nth-child(2) {
+  top: 20px;
+  transform: translateY(-50%);
+}
+
+.bar:nth-child(3) {
+  top: 40px;
+  transform: translateY(-100%);
+}
+
+/* ----------------activeクラス付与・btn_hover---------------- */
+.active .bar:nth-child(1){
+  top: 16px;
+  transform: rotate(45deg);
+}
+
+.active .bar:nth-child(2){
+  opacity: 0;
+}
+
+.active .bar:nth-child(3){
+  top: 16px;
+  transform: rotate(-45deg);
+}
+
+.active .all_list {
+  display: block;
+}
+
+.active .background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  transition: ease .2s;
+}
+
+.active .deadline {
+  color:rgb(125, 0, 0)
+}
+
+/* ----------------ハンバーガーメニュー内のメニュー---------------- */
+ul {
+  list-style: none;
+}
+
+.menu_link {
+  border: none;
+  background-color: white;
+  font-size: 18px;
+}
+
+.menu_link:hover {
+  color: rgb(125, 0, 0);
+  transition: ease .2s;
+}
+
+.sun_icon {
+  vertical-align: bottom;
+  margin-bottom: 3px;
+  margin-right: -2px;
+}
+
+.moon_icon {
+  vertical-align: bottom;
+  margin-left: 3px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+}
+
+.dead_icon {
+  vertical-align: bottom;
+  margin-bottom: 5px;
+  margin-right: 2px;
+}
+
+.eraser {
+  margin-left: -3px;
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  top: 40px;
+  right: 100px;
+  width: 18%;
+}
+
+.menu:before {
+  content: '';
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  height: 102%;
+  margin-top: 10px;
+  transform: skew(-3deg);
+  z-index: 5;
+}
+
+.menu:after {
+  content: '';
+  position: absolute;
+  background-color: rgb(22, 20, 20);
+  width: 100%;
+  height: 104%;
+  transform: skew(5deg);
+  z-index: 5;
+}
+
+.all_list {
+  display: none;
+  background-color: white;
+  width: 100%;
+  text-align: left;
+  line-height: auto;
+  z-index: 10;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-right: -30px;
+}
+
+.list_title:first-child {
+  margin-top:0;
+}
+
+.list_title {
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ----------------amのスケジュール---------------- */
+.schedules {
+  position: relative;
+}
+
+.am_title {
+  position: absolute;
+  /* top: 177px; */
+  margin-top: 25%;
+  right: 0;
+  height: 10vh;
+  width: 90%;
+}
+
+.p_am_time {
+  font-weight: bold;
+  font-size: 27px;
+  border-bottom: 10px rgb(248, 143, 131) solid;
+}
+
+.p_am_time img,
+.p_pm_times img {
+  vertical-align: bottom;
+  margin-right: -5px;
+}
+
+.am_span_times,
+.pm_span_times {
+  color: black;
+}
+
+.ams,
+.pms {
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 19px;
+}
+
+/* ----------------pmのスケジュール---------------- */
+.pm_title {
+  position: absolute;
+  margin-top: 50%;
+  right: 0;
+  width: 100%;
+  height: 10vh;
+}
+
+.p_pm_times {  
+  font-weight: bold;
+  font-size: 27px;
+  border-bottom: 10px black solid;
+}
+
+/* -------------------------------予定登録-------------------------------- */
+/* 登録・編集・削除共通部品 */
+span {
+  color: red;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+}
+
+.register_container {
+  margin-top: 80px;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.background_form {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 68%;
+  margin: auto;
+  margin-top: 80px;
+  padding-bottom: 5px;
+  padding-top: 8px;
+}
+
+.background_form h2 {
+  text-align: center;
+}
+
+.background_form_complete {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  padding: 50px 0;
+}
+
+.default_form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.default_form h1 {
+  margin: 0;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.form_contents {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.body { /* スケジュールのinput欄*/
+  width: 100%;
+  font-size: 20px;
+  text-align: left;
+}
+
+.day,.time,.body {
+  margin-bottom: 12px;
+  padding: 5px 0;
+}
+
+.day,.time {
+  font-size: 15px;
+}
+
+.time {
+  margin-left: 8px;
+}
+
+.f_time {
+  margin-bottom: 12px;
+  padding: 5px 0;
+  font-size: 15px;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 80px;
+
+  width: 100%;
+}
+
+.edit_btns {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.edit_btn {
+  width: 30%;
+  margin: auto;
+  padding: 10px;
+  font-size: 18px;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+.edit_btn:hover {
+  background-color: red;
+}
+
+.edit_link {
+  text-align: center;
+}
+
+.edit_link a:hover {
+  color: rgb(125, 0, 0);
+}
+
+.btn {
+  width: 15%;
+  margin: auto;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.next {
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-weight: bold;
+  width: 20%;
+}
+
+.next:hover {
+  background-color: red;
+}
+
+.back {
+  background-color: rgba(192, 190, 190, 0.6);
+  border: none;
+  font-weight: bold;
+  width: 20%;
+}
+
+.back:hover {
+  background-color: rgba(84, 84, 84);
+}
+
+.complete {
+  text-align: center;
+  margin-top: 8%;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.content p {
+  font-size: 18px;
+}
+
+.confirm_contents::after {
+  content: '';
+  border-bottom: 2px rgb(85, 84, 84) solid;
+  display: block;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+}
+
+.confirm_contents {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.complete p {
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.complete a {
+  font-size: 20px;
+}
+
+.complete a:hover {
+  color: rgb(125, 0, 0);
+}
+
+/* --------------------------------予定編集-------------------------------- */
+.pickday { /* 日付選択文字サイズ */
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.pickbtn { /* 日付選択ボタン */
+  font-size: 18px;
+  border: none;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  width: 70px;
+  height: 35px;
+}
+
+.pickbtn:hover {
+  background-color: red;
+}
+
+.edit_container label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.edit_container {
+  padding-top: 20px;
+}
+
+.edit_form {
+  text-align: left;
+  width: 65%;
+  margin: 20px auto;
+}
+
+.edit_form label {
+  font-weight: bold;
+}
+
+.edit_choice_form {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+}
+
+.edit_content {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.edit_content label {
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+.edit_button::after {
+  content: '';
+  border-bottom: 2px rgb(85, 84, 84) solid;
+  display: block;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  margin-top: 20px;
+}
+
+.edit_confirm h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.edit_form_contents {
+  text-align: center;
+  font-size: 20px;
+}
+
+.edit_button { /* 次に進むボタンクラス */
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+/* --------------------------------削除-------------------------------- */
+.delete_container {
+  font-size: 20px;
+  width: 65%;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.delete_choice_day {
+  text-align: center;
+}
+
+.delete_choice_day label {
+  font-weight: bold;
+}
+
+.delete_content {
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.delete_content label {
+  font-weight: bold;
+}
+
+.d_content {
+  margin-top: 20px;
+}
+
+.delete_btn {
+  text-align: center;
+}
+
+.delete_btn button {
+  margin-top: 50px;
+  font-size: 15px;
+  width: 20%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  background-color: rgba(125, 0, 0, 0.6);
+}
+
+.delete_btn button:hover {
+  background-color: rgb(220, 0, 0);
+}
+
+
+.top {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.top a,
+.pm_top a {
+  font-size: 20px;
+  color: white;
+}
+
+.top a:hover,
+.pm_top a:hover {
+  color: rgb(125, 0, 0);
+}
+
+input[type=checkbox] {
+  transform: scale(2);
+  margin: 0 15px 0 0;
+}
+
+.del_time, .del_body {
+  margin-left: 35px;
+}
