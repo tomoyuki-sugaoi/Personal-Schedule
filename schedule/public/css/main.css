@@ -241,6 +241,10 @@ td {
   border: none;
 }
 
+.month_btn:hover {
+  background-color:rgb(84, 84, 84);
+}
+
 .m_prev {
   margin-right: 8rem;
 }
