@@ -46,6 +46,6 @@
     </section>
   </form>
 
-  <footer>@Personal Calendar</footer>
+  <footer>@Personal Schedule</footer>
 </body>
 </html>
