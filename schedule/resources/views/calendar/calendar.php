@@ -263,6 +263,6 @@ if(session('nouser')) {
   </div>
   <script src=/js/main.js></script>
 
-  <footer>@Personal Calendar</footer>
+  <footer>@Personal Schedule</footer>
 </body>
 </html>
